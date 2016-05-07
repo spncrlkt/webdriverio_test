@@ -4,7 +4,9 @@
   "description": "webdriverio test",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio wdio.conf.js"
+    "test": "npm run test:dev",
+    "test:dev": "HOST='http://0.0.0.0:3000' ./node_modules/.bin/wdio wdio.conf.js",
+    "test:docker": "HOST='http://192.168.99.100' ./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",

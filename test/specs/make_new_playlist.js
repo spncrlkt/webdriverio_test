@@ -8,11 +8,13 @@ describe('make new playlist', function() {
     assert(urlChanged, 'url changes to setlist/:new_id');
   });
 
-  it('should make a new playlist w/ id', function () {
+  it('should make a new playlist w/ valid id', function () {
     RoutesPage.makeNewPlaylist();
+    var setlistId = RoutesPage.getSetlistIdFromUrl();
 
-    var url = browser.getUrl();
-    console.log(url);
+    assert(setlistId, 'SetlistID should not be falsy');
+    assert(setlistId != 'setlist', 'SetlistID should not be "setlist"');
+    assert(setlistId.length === 24, 'SetlistID should be length 24');
   });
 
   it('should make a new empty playlist', function () {

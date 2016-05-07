@@ -4,7 +4,7 @@
   "description": "webdriverio test",
   "main": "index.js",
   "scripts": {
-    "test": "text"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/spncrlkt/webdriverio_test#readme",
   "devDependencies": {
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.13",
     "webdriverio": "^4.0.7"
   }
 }
